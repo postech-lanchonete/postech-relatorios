@@ -6,7 +6,7 @@ Durante a análise de segurança realizada com a ferramenta OWASP ZAP (Zed Attac
 
 | Report antes | Resport depois |
 | ------------ | ---------------|
-| [Click aqui]('zap-report-cardapio-antes.html')   | [Click aqui]('zap-report-cardapio-depois.html')     |
+| [Click aqui](zap-report-cardapio-antes.html)   | [Click aqui](zap-report-cardapio-depois.html)     |
 
 ### 1. X-Content-Type-Options Header Missing
 
