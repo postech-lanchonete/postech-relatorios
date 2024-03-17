@@ -2,11 +2,13 @@
 
 Durante a análise de segurança realizada com a ferramenta OWASP ZAP (Zed Attack Proxy), foram identificados alguns problemas em nossa aplicação. Este relatório destaca os problemas encontrados e apresenta as soluções propostas para mitigá-los.
 
+____
+
 ## Listar/exibir cardápio
 
-| Report antes | Resport depois |
+| Report antes | Report depois |
 | ------------ | ---------------|
-| [Click aqui](zap-report-cardapio-antes.html)   | [Click aqui](zap-report-cardapio-depois.html)     |
+| [Click aqui](https://postech-lanchonete.github.io/postech-relatorios/zap-report-cardapio-antes.html)   | [Click aqui](https://postech-lanchonete.github.io/postech-relatorios/zap-report-cardapio-depois.html)     |
 
 ### 1. X-Content-Type-Options Header Missing
 
@@ -14,7 +16,7 @@ Durante a análise de segurança realizada com a ferramenta OWASP ZAP (Zed Attac
 
 A ausência do cabeçalho X-Content-Type-Options nas respostas HTTP pode expor a aplicação a riscos de segurança relacionados à detecção inadequada do tipo MIME pelos navegadores.
 
-#### Impacto Potencial:
+#### Potencial Impacto:
 
 Risco de execução de scripts maliciosos ou carregamento de conteúdo não seguro devido à detecção de tipo MIME inadequada.
 
@@ -26,7 +28,7 @@ Adicionar o cabeçalho X-Content-Type-Options: nosniff em todas as respostas HTT
 
 Descrição: Os atuadores do Spring, como o /actuator/health, podem expor informações sensíveis sobre o estado da aplicação, incluindo detalhes sobre saúde e configuração. 
 
-#### Impacto Potencial:
+#### Potencial Impacto:
 
 Exposição indevida de informações sensíveis, o que pode facilitar ataques de exploração e comprometer a segurança da aplicação.
 
@@ -34,11 +36,13 @@ Exposição indevida de informações sensíveis, o que pode facilitar ataques d
 
 Desabilitar os atuadores de saúde e outros atuadores desnecessários ou restringi-los apenas a usuários administrativos para evitar vazamentos de informações.
 
+____
+
 ## Realização pedido (Checkout)
 
-| Report antes | Resport depois |
+| Report antes | Report depois |
 | ------------ | ---------------|
-| Click aqui   | Click aqui     |
+| [Click aqui](https://postech-lanchonete.github.io/postech-relatorios/zap-report-pedidos-antes.html)   | [Click aqui](https://postech-lanchonete.github.io/postech-relatorios/zap-report-pedidos-depois.html)     |
 
 ### 1. X-Content-Type-Options Header Missing
 
@@ -46,7 +50,7 @@ Desabilitar os atuadores de saúde e outros atuadores desnecessários ou restrin
 
 A ausência do cabeçalho X-Content-Type-Options nas respostas HTTP pode expor a aplicação a riscos de segurança relacionados à detecção inadequada do tipo MIME pelos navegadores.
 
-#### Impacto Potencial:
+#### Potencial Impacto:
 
 Risco de execução de scripts maliciosos ou carregamento de conteúdo não seguro devido à detecção de tipo MIME inadequada.
 
@@ -68,10 +72,12 @@ A ocorrência de buffer overflow pode resultar na execução inesperada da aplic
 
 Para solucionar o problema de buffer overflow, foi realizada uma revisão do código-fonte, removendo erros genéricos que ocorriam quando os dados eram informados em formatos diferentes do tipo esperado. Além disso, foram implementadas validações adicionais para garantir o tamanho correto dos dados inseridos. Essas ações ajudaram a mitigar o risco de buffer overflow e fortalecer a segurança da aplicação.
 
+____
+
 ## Confirmação do Pagamento (Webhook)
 
-| Report antes | Resport depois |
+| Report antes | Report depois |
 | ------------ | ---------------|
-| Click aqui   | Não disponível |
+| [Click aqui](https://postech-lanchonete.github.io/postech-relatorios/zap-report-pagamento-webhook.html)   | Não disponível |
 
 Para este projeto nenhum problema foi encontrado, uma vez que as melhorias propostas pelos outros reports foram tambem realizar nele.
